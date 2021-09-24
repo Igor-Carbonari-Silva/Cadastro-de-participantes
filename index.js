@@ -1,8 +1,8 @@
-let listaDeEstudantes = ["Giroto", "Lucas", "Eduardo", "Igor"];
-let quantidadeDeEstudantes = listaDeEstudantes.length;
-if (quantidadeDeEstudantes < 5) {
-	listaDeEstudantes.push("Welinton");
-	console.log(listaDeEstudantes);
-} else {
-	console.log("Limite de alunos atingido");
-}
+let readline = require('readline-sync');
+var dataDoEvento;
+var nome;
+var idade;
+
+dataDoEvento = readlineSync.question("Informe a data: ");
+nome = readlineSync.question("Informe o nome: ");
+idade = readlineSync.question("Informe sua idade: ");
