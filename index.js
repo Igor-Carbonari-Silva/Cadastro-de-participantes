@@ -3,29 +3,38 @@ var nome;
 var dataDoEvento;
 var idade;
 var dataAtual;
-var listaParticipantesPalestrantes = 77;
+var listaParticipantesPalestrantes = 98;
 
 nome = readlineSync.question("Digite seu nome: ");
 dataDoEvento = readlineSync.question("Informe a data do evento: ");
 idade = readlineSync.question("Digite sua idade: ");
 dataAtual = readlineSync.question("Informe a data atual: ");
 
-if(dataDoEvento > dataAtual){
-    //condição verdadeira
-    if(idade > 18){
+while (listaParticipantesPalestrantes < 100) {
+
+    if(dataDoEvento > dataAtual){
         //condição verdadeira
-		if(listaParticipantesPalestrantes < 100){
-			//condição verdadeira
-			console.log("Participante cadastro com SUCESSO!!!");
-		}else{
-			//condição falsa
-			console.log("Cadastro negado, lista de participantes excedida!");
-		}
+        if(idade > 18){
+            //condição verdadeira
+            if(listaParticipantesPalestrantes < 100){
+                //condição verdadeira
+                console.log("Participante cadastro com SUCESSO!!!");
+            }else{
+                //condição falsa
+                console.log("Cadastro negado, lista de participantes excedida!");
+            }
+        }else{
+            //condição falsa
+            console.log("Cadastro negado, idade inválida!");
+        }
     }else{
         //condição falsa
-		console.log("Cadastro negado, idade inválida!");
+        console.log("Cadastro não permitido, data inválida!");
     }
-}else{
-    //condição falsa
-    console.log("Cadastro não permitido, data inválida!");
+
+    nome = readlineSync.question("Digite seu nome: ");
+    dataDoEvento = readlineSync.question("Informe a data do evento: ");
+    idade = readlineSync.question("Digite sua idade: ");
+    dataAtual = readlineSync.question("Informe a data atual: ");
+    listaParticipantesPalestrantes++;
 }
