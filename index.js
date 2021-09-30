@@ -3,14 +3,14 @@ var nome;
 var dataDoEvento;
 var idade;
 var dataAtual;
-var listaParticipantesPalestrantes = 98;
+var listaParticipantesPalestrantes;
 
 nome = readlineSync.question("Digite seu nome: ");
 dataDoEvento = readlineSync.question("Informe a data do evento: ");
 idade = readlineSync.question("Digite sua idade: ");
 dataAtual = readlineSync.question("Informe a data atual: ");
 
-while (listaParticipantesPalestrantes < 100) {
+for (var listaParticipantesPalestrantes = 0; listaParticipantesPalestrantes < 100; listaParticipantesPalestrantes++){
 
     if(dataDoEvento > dataAtual){
         //condição verdadeira
@@ -36,5 +36,7 @@ while (listaParticipantesPalestrantes < 100) {
     dataDoEvento = readlineSync.question("Informe a data do evento: ");
     idade = readlineSync.question("Digite sua idade: ");
     dataAtual = readlineSync.question("Informe a data atual: ");
-    listaParticipantesPalestrantes++;
+    
 }
+
+console.log("Cadastro negado, lista de participantes excedida!");
